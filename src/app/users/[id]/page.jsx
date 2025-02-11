@@ -58,7 +58,7 @@ export default function SingleUsersComponents () {
             </div>
           </div>
         ) : (
-          <div className='text-center'>Foydalanuvchi topilmadi</div>
+          <div className='text-center'>No data</div>
         )}
       </div>
     </>
