@@ -27,7 +27,6 @@ export default function Users () {
         console.log(res.data)
 
         setUsersFilter(res.data)
-        // setPageContainer(res.data.total_pages)
       })
       .catch(err => {
         console.log(err)
@@ -132,11 +131,6 @@ export default function Users () {
             {i + 1}
           </button>
         ))}
-      {/* 
-      <button className='p-3 border-2 ml-2' onClick={()=>{setPageContainer(1)}}>1</button>
-      <button className='p-3 border-2 ml-2' onClick={()=>{setPageContainer(2)}}>2</button>
-      <button className='p-3 border-2 ml-2' onClick={()=>{setPageContainer(3)}}>3</button>
-      <button className='p-3 border-2 ml-2' onClick={()=>{setPageContainer(4)}}>4</button> */}
     </div>
   )
 }
