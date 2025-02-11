@@ -1,8 +1,8 @@
 'use client'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import Link from 'next/link';
-
+import Link from 'next/link'
+import NavberComponents from '@/components/navbar/navberComponents'
 
 const baseUrl = 'https://reqres.in/'
 
@@ -13,7 +13,6 @@ export default function Users () {
   const [usersFilter, setUsersFilter] = useState({})
   const [per_page, setPer_page] = useState(4)
   const [pageContainer, setPageContainer] = useState(1)
-
 
   console.log(pageContainer)
 
@@ -51,10 +50,7 @@ export default function Users () {
 
   return (
     <div className='scrollbar-none'>
-      <h1 className='text-center text-3xl w-full py-2 shadow-lg'>
-        Hello ReqRes users!
-      </h1>
-
+      <NavberComponents />
       <div className='flex justify-between gap-5'>
         <form className='flex items-center flex-col mt-10 w-1/5 ml-5 gap-3'>
           <input
@@ -110,12 +106,10 @@ export default function Users () {
                       {e.email}
                     </a>
                     <Link href={`/users/${e.id}`} key={e.id}>
-                    <button
-                      className='text-blue-500 w-full rounded-lg  active:text-blue-300'
-                    >
-                      More Information
-                    </button>
-                  </Link>
+                      <button className='text-blue-500 w-full rounded-lg  active:text-blue-300'>
+                        More Information
+                      </button>
+                    </Link>
                   </div>
                 </div>
               )
